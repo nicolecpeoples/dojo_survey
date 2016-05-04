@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/local.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type="text/javascript" src='{{ url_for('static', filename='js/local.js') }}'></script>
+    </head>
+    <body>
+    	<div class="container">
+            <h1> Coding Dojo Survey </h1>
+            <div id="form-wrap" >
+        		<form action="/result" method="post">
+        		      <p> Your Name: <input type="text" name="full_name" placeholder="Full Name"></p>
+                      <p> Dojo Location: 
+                            <select name="location">
+                                <option value="seattle"> Seattle </option>
+                                <option value="silicon_valley"> San Jose </option>
+                                <option value="los_angeles"> Los Angeles </option>
+                                <option value="chicago"> Chicago </option>
+                                <option value="dc"> Washington DC </option>
+                                <option value="dallas"> Dallas </option>
+                            </select>
+                        </p>
+                        <p> Favorite Language: 
+                            <select name="language_preference">
+                                <option value="python"> Python </option>
+                                <option value="javascript"> Javascript </option>
+                                <option value="ruby"> Ruby</option>
+                                <option value="swift"> Swift </option>
+                                <option value="php"> PHP </option>
+                            </select>
+                        </p>
+                        <p> Comment (optional)
+                            <textarea name="comments"></textarea>
+                        </p>
+                        <button type="submit" value="submit" > Submit </button>
+                        <div class="clr"></div>
+        		</form>
+               
+            </div>
+    	</div><!-- .container -->
+    <!-- <img type="text/javascript" src='{{ url_for('static', filename='img/my_img.png') }}'> -->
+    </body>
+</html>

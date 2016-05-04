@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dojo Survey Results</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/local.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type="text/javascript" src='{{ url_for('static', filename='js/local.js') }}'></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="results-wrap">
+                <div class="results">
+                    <h2> Submitted Info </h2>
+                    <table >
+                        <tr>
+                            <td> Name </td>
+                            <td> {{name}} </td>
+                        </tr>
+                        <tr>
+                            <td> Dojo Location: </td>
+                            <td> {{location}} </td>
+                        </tr>
+                        <tr>
+                            <td> Favorite Language </td>
+                            <td> {{language}} </td>
+                        </tr>
+                        <tr>
+                            <td> Comment </td>
+                            <td> {{comments}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
