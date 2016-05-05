@@ -15,6 +15,13 @@
             <h1> Coding Dojo Survey </h1>
             <div id="form-wrap" >
         		<form action="/result" method="post">
+                    {% with messages = get_flashed_messages() %} 
+                        {% if messages %}
+                          {% for message in messages %}
+                            <p>{{message}}</p>
+                          {% endfor %}
+                        {% endif %}
+                      {% endwith %}
         		      <p> Your Name: <input type="text" name="full_name" placeholder="Full Name"></p>
                       <p> Dojo Location: 
                             <select name="location">
@@ -35,7 +42,8 @@
                                 <option value="php"> PHP </option>
                             </select>
                         </p>
-                        <p> Comment (optional)
+                        
+                        <p> Comment
                             <textarea name="comments"></textarea>
                         </p>
                         <button type="submit" value="submit" > Submit </button>
